@@ -36,7 +36,7 @@ bool cSC4BaseViewInputControl::QueryInterface(uint32_t riid, void** ppvObj)
 {
 	if (riid == GZIID_cISC4ViewInputControl)
 	{
-		*ppvObj = this;
+		*ppvObj = static_cast<cISC4ViewInputControl*>(this);
 		AddRef();
 
 		return true;
