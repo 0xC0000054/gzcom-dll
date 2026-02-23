@@ -5,6 +5,7 @@
  *
  * Copyright (C) 2016 Nelson Gomez
  * Copyright (C) 2025 Nicholas Hayes
+ * Copyright (C) 2026 Casper Van Gheluwe
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -129,8 +130,34 @@ class cISC4View3DWin : public cIGZUnknown
 
 		virtual void DisplayTerrainPickDebugString(int32_t, int32_t) = 0; // no-op
 		virtual bool GetTerrainQueryEnabled(void) = 0;
-		virtual bool SetCursorText(uint32_t, uint32_t, cIGZString const*, cIGZString const*, int32_t) = 0;
-		virtual bool ClearCursorText(uint32_t) = 0;
+		/**
+		 * Sets or updates cursor text.
+		 *
+		 * If an entry with the given ID already exists, its text and icon are updated in place.
+		 * If not, a new entry is inserted into a priority-sorted list. Only the highest-priority
+		 * entry is displayed. Passing null or empty strings for both text parameters clears the
+		 * entry.
+		 *
+		 * @param cursorId Unique identifier for this cursor text entry. Use a consistent ID
+		 *                 per tool, so repeated calls update rather than duplicate.
+		 * @param priority Display priority. Higher values take precedence; the entry with the
+		 *                 highest priority in the list is the one shown.
+		 * @param title Primary text line, or null to clear it.
+		 * @param body Secondary text line, or null to clear it.
+		 * @param icon Cursor text icon mode. 0 for default (text follows mouse), 1 to
+		 *             anchor the icon at the 3D position set via SetCursorTextPosition3D. Other modes may exist.
+		 */
+		virtual bool SetCursorText(uint32_t cursorId, uint32_t priority, cIGZString const* title, cIGZString const* body, int32_t icon) = 0;
+		/**
+		 * Removes a cursor text entry by ID.
+		 *
+		 * If no entry with the given ID exists, this is a no-op. After removal, the display
+		 * updates to show the next highest-priority entry or hides the cursor text UI if
+		 * the list is empty.
+		 *
+		 * @param cursorId  The identifier of the cursor text entry to remove.
+		 */
+		virtual bool ClearCursorText(uint32_t cursorId) = 0;
 		virtual bool SetCostIndicator(uint32_t) = 0;
 		virtual bool SetCostIndicator(uint32_t, uint32_t) = 0;
 		virtual bool ClearCostIndicator(bool) = 0;
