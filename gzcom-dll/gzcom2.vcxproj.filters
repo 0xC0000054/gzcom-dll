@@ -822,6 +822,12 @@
     <ClInclude Include="include\cISC4PropOccupantVisualEffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\cIGZFont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cIGZFontSys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cRZBaseString.cpp">

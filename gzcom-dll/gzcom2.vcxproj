@@ -106,6 +106,8 @@
     <ClInclude Include="include\cIGZDBSerialRecordAsIGZFile.h" />
     <ClInclude Include="include\cIGZFile.h" />
     <ClInclude Include="include\cIGZFileSystem.h" />
+    <ClInclude Include="include\cIGZFont.h" />
+    <ClInclude Include="include\cIGZFontSys.h" />
     <ClInclude Include="include\cIGZFrameWork.h" />
     <ClInclude Include="include\cIGZFrameWorkHooks.h" />
     <ClInclude Include="include\cIGZFrameWorkW32.h" />
