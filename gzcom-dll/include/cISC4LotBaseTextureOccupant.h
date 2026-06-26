@@ -40,7 +40,7 @@ class cISC4LotBaseTextureOccupant : public cIGZUnknown
 		virtual bool GetCellCoverage(SC4Vector<SC4Point<int>>&, SC4Vector<bool>*) = 0;
 		virtual bool IsCellCovered(int32_t, int32_t, bool*) = 0;
 
-		virtual bool SetTextureSpecification(cISC4LotBaseTextureOccupant::LotBaseTextureSpecification const*, uint32_t, bool*) = 0;
+		virtual void SetTextureSpecification(cISC4LotBaseTextureOccupant::LotBaseTextureSpecification const*, uint32_t, bool*) = 0;
 
 		virtual bool UpdateVertexAltitudes(bool, bool, bool*) = 0;
 

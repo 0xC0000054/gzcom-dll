@@ -95,7 +95,7 @@ class cISC4LotDeveloper : public cIGZUnknown
 
 		virtual bool GetLotBaseTextureOccupant(cISC4Lot* pLot, cISC4LotBaseTextureOccupant*& pOccupant, bool) = 0;
 		virtual bool GetBoundaryLotTexture(cISC4LotDeveloper::BoundaryType* pType, uint32_t&, uint8_t&, bool&) = 0;
-		virtual bool SetEmptyLotBaseTexture(cISC4Lot* pLot) = 0;
+		virtual void SetEmptyLotBaseTexture(cISC4Lot* pLot) = 0;
 		virtual cISC4Lot* SetNormalLotBaseTexture(cISC4Lot* pLot, cISC4LotConfiguration* pConfig, bool) = 0;
 		virtual bool UpdateLotBaseTextureOccupant(cISC4Lot* pLot, bool) = 0;
 		virtual bool GetForceEmptyLotBaseTextures(void) = 0;
