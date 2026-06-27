@@ -849,6 +849,12 @@
     <ClInclude Include="include\cIGZExceptionNotification.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\cIGZWinSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cIGZWinScrollbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cRZBaseString.cpp">
