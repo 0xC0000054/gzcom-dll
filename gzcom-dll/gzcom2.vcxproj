@@ -157,10 +157,12 @@
     <ClInclude Include="include\cIGZWinKeyAcceleratorRes.h" />
     <ClInclude Include="include\cIGZWinMessageFilter.h" />
     <ClInclude Include="include\cIGZWinMgr.h" />
+    <ClInclude Include="include\cIGZWinOptGrp.h" />
     <ClInclude Include="include\cIGZWinProc.h" />
     <ClInclude Include="include\cIGZWinProcFilterW32.h" />
     <ClInclude Include="include\cIGZWinScrollbar.h" />
     <ClInclude Include="include\cIGZWinSlider.h" />
+    <ClInclude Include="include\cIGZWinSpinner.h" />
     <ClInclude Include="include\cIGZWinText.h" />
     <ClInclude Include="include\cIS3DModelInstance.h" />
     <ClInclude Include="include\cIS3DTextureBindingFactory.h" />
