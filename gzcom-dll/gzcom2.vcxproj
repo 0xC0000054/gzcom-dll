@@ -164,6 +164,7 @@
     <ClInclude Include="include\cIGZWinSlider.h" />
     <ClInclude Include="include\cIGZWinSpinner.h" />
     <ClInclude Include="include\cIGZWinText.h" />
+    <ClInclude Include="include\cIGZWinTextEdit.h" />
     <ClInclude Include="include\cIS3DModelInstance.h" />
     <ClInclude Include="include\cIS3DTextureBindingFactory.h" />
     <ClInclude Include="include\cISC43DRender.h" />
