@@ -29,6 +29,8 @@ class cIGZCmdLine;
 class cIGZCOM;
 class cIGZExceptionNotification;
 class cIGZFrameWorkHooks;
+class cIGZIStream;
+class cIGZOStream;
 class cIGZSystemService;
 
 /**
@@ -54,6 +56,13 @@ class cIGZFrameWork : public cIGZUnknown
 			kStatePreAppShutdown = 10,
 			kStatePostAppShutdown = 11,
 			kStatePostSystemServiceShutdown = 12
+		};
+
+		enum tStreamType : int32_t
+		{
+			kStreamTypeStandardOutput = 0,
+			kStreamTypeStandardError = 1,
+			kStreamTypeStandardInput = 2,
 		};
 
 		/**
@@ -193,12 +202,12 @@ class cIGZFrameWork : public cIGZUnknown
 		virtual bool SetDebugLevel(int32_t nLevel) = 0;
 		virtual int32_t GetDebugLevel(void) = 0;
 
-		virtual int32_t StdOut(void) = 0;
-		virtual int32_t StdErr(void) = 0;
-		virtual int32_t StdIn(void) = 0;
+		virtual cIGZOStream* StdOut(void) = 0;
+		virtual cIGZOStream* StdErr(void) = 0;
+		virtual cIGZIStream* StdIn(void) = 0;
 
-		virtual void* GetStream(void) = 0;
-		virtual bool SetStream(int32_t nUnknown, cIGZUnknown* pUnknown) = 0;
+		virtual bool GetStream(tStreamType type, uint32_t riid, void** ppvObj) = 0;
+		virtual bool SetStream(tStreamType type, cIGZUnknown* pUnknown) = 0;
 
 		/**
 		 * @brief Sets an application to associate with the framework
