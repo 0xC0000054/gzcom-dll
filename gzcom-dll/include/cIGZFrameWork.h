@@ -4,7 +4,7 @@
  * cIGZFrameWork.h
  *
  * Copyright (C) 2016 Nelson Gomez
- * Copyright (C) 2023, 2024 Nicholas Hayes
+ * Copyright (C) 2023, 2024, 2026 Nicholas Hayes
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -163,15 +163,13 @@ class cIGZFrameWork : public cIGZUnknown
 		/**
 		 * @brief Sets whether tick events are enabled
 		 * @param bTick Whether to enable tick events or not
-		 * @return The "this" pointer
 		 */
-		virtual cIGZFrameWork* ToggleTick(bool bTick) = 0;
+		virtual void ToggleTick(bool bTick) = 0;
 
 		/**
 		 * @brief Prepares the game for shutdown for some given reason
-		 * @return nQuitReason
 		 */
-		virtual int32_t Quit(int32_t nQuitReason) = 0;
+		virtual void Quit(int32_t nQuitReason) = 0;
 
 		/**
 		 * @brief Immediately terminates the game for some given reason
